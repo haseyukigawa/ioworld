@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+        <html lang="ja">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>キハダ紹介ページ</title>
+            <link rel="stylesheet" href="../000_scripts/reset.css" />
+            <link rel="stylesheet" href="../000_scripts/main_style.css" />
+            <link rel="stylesheet" href="../000_scripts/menu.css" />
+            <script src="../000_scripts/main_script.js" defer></script>
+            <script src="../000_scripts/menu.js" defer></script>
+            <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+        </head>
+        <body>
+            <div class="header">
+                <a href="https://ioworld.jp/">
+                    <img src="../001_images/001_main/main_title.png" alt="main_title" class="header-logo" />
+                </a>
+            </div>
+
+            <button class="hamburger" aria-label="メニュー">
+                <div class="hamburger-inner"><span></span><span></span><span></span></div>
+            </button>
+
+            <nav class="hamburger-menu hidden">
+                <ul>
+                    <li class="menu-item"><a id="qrButton" href="javascript:void(0)">QRコードを撮影して検索</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/information#01">営業案内</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/access">アクセス</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/floor1">展示マップ</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/regularevent">イベント</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/facilities/shop#restaurant">ショップ・レストラン</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/study#post-1475">教育・研究</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/information/group">団体のお客様</a></li>
+                    <li class="menu-item"><a>Language (Coming soon)</a></li>
+                </ul>
+            </nav>
+
+            
+            <div class="header-container">
+                <h1>キハダ</h1>
+            </div>
+            <div class="content-wrapper">
+                <img src="images/kihada.jpg" alt="キハダ" class="main-photo">
+
+                <div class="tabs-wrapper">
+                    <button class="scroll-btn scroll-left" aria-label="左にスクロール" id="scrollLeftBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="18 21 3 12 18 3"></polyline>
+                        </svg>
+                    </button>
+                    <div class="tabs" id="tabsContainer">
+                        <button type="button" class="tablink active" data-tab="quick">特徴</button>
+                        <button type="button" class="tablink" data-tab="detail">くわしく</button>
+                        <button type="button" class="tablink" data-tab="comment">飼育員のひとこと</button>
+                        <button type="button" class="tablink" data-tab="area">生息地</button>
+                        <button type="button" class="tablink" data-tab="quiz">魚クイズ</button>
+                        <button type="button" class="tablink" data-tab="trivia">豆知識「へぇ〜！」</button>
+                        <button type="button" class="tablink" data-tab="exhibit">館内の展示位置</button>
+                    </div>
+                    <button type="button" class="scroll-btn scroll-right" aria-label="右にスクロール" id="scrollRightBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 21 21 12 6 3"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div id="quick" class="tab-content active">
+                    <p>キハダは全長2m、体重200kgに達する中型のマグロで、背ビレと尾ビレが鮮やかな黄色で、そこから「黄肌」という名前がつきました。</p>
+                </div>
+                <div id="detail" class="tab-content">
+                    <p>熱帯性のマグロの仲間で、クロマグロのように津軽海峡を越えて北海道沖合まで回遊することはありません。鹿児島県では主に奄美群島などの離島で漁獲され、マグロ類の中では最も多く水揚げされています。</p>
+                </div>
+                <div id="comment" class="tab-content">
+                    <p>とにかく元気！水槽の中でも泳ぎっぱなし。目が合うと“もっと速く泳げるぞ”って自慢してくるような、そんな魚です。</p>
+                    <img src="../001_images/003_keeper_pictures/hasegawa.png" alt="飼育員写真" class="keeper-photo" />
+                    <p class="keeper-name">（飼育員 ゆっきー）</p>
+                </div>
+                <div id="area" class="tab-content">
+                    <p>太平洋やインド洋などの温暖な海に広く分布しています。日本では主に小笠原諸島、沖縄周辺、鹿児島県では主に奄美群島などの離島で漁獲されます。</p>
+                    <iframe src="" 
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy">
+                    </iframe>
+                </div>
+
+                <div id="quiz" class="tab-content">
+                    <p class="question"><strong>Q1：</strong>キハダの名前の由来はどこから来ている？</p>
+                    <div class="options"
+                        data-correct-msg="✅ <strong>正解！</strong><br>背ビレや尾ビレが黄色くて目立つから、「黄肌（キハダ）」って呼ばれているんです！"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「2.ヒレが黄色いから」</strong>です。名前の由来は「ヒレ」の色なんです。じっくり見てみてね！">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. お腹が黄色いから</button><button onclick="checkAnswer(this)" data-correct="true">2. ヒレが黄色いから</button><button onclick="checkAnswer(this)" data-correct="false">3. 目が黄色いから</button>
+                    </div>
+                    <div id="feedback1" class="feedback"></div>
+
+                    <p class="question"><strong>Q2：</strong>キハダはどんな生活をしている魚でしょう？</p>
+                    <div class="options"
+                        data-correct-msg="✅ <strong>正解！</strong><br>小魚やイカなどを捕食します。"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「2.群れで遠くまで泳ぐ」</strong>です。キハダは回遊魚といって、エサを求めて広い海を群れで泳ぎ続けているよ！">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. 岩の隙間でじっとしている</button><button onclick="checkAnswer(this)" data-correct="true">2. 群れで遠くまで泳ぐ</button><button onclick="checkAnswer(this)" data-correct="false">3. 海底でじっと砂に隠れている</button>
+                    </div>
+                    <div id="feedback2" class="feedback"></div>
+                </div>
+
+                <div id="trivia" class="tab-content">
+                    <p>キハダはお刺身やツナ缶の材料としても有名ですが、マグロの中では比較的あっさりした味わいで、ヘルシーな食材としても人気です。</p>
+                </div>
+                <div id="exhibit" class="tab-content">
+                    <p>かごしま水族館で最も大きな水槽で、水量は1500㎥です。ジンベエザメやマグロやカツオなど黒潮の流れに乗って回遊する魚を展示しています。</p>
+                    <img src="" alt="展示場所" style="max-width:100%; border-radius:8px;" />
+                </div>
+                
+                <!-- フッター -->
+                <div class="footer">
+                    <p>いおワールド　かごしま水族館</p>
+                </div>
+            </div>
+
+        <button id="cancel-button" style="display: none;">キャンセル</button>
+        <div id="video-overlay" style="display: none;">
+            <div id="scan-frame"></div>
+        </div>
+        <video id="video" autoplay playsinline style="display: none;"></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+
+        </body>
+        </html>
+        
