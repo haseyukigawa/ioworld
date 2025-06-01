@@ -1,0 +1,182 @@
+.header {
+	position: relative;
+	background: rgb(255, 255, 255);
+	padding: 4px 10px;
+	z-index: 1000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-logo {
+	margin-top: 5px;
+	height: auto;
+	max-height: 35px;
+	max-width: 100%;
+}
+
+/* ハンバーガーボタン */
+.hamburger {
+	position: absolute; /* fixedでもOK */
+	top: 25px;
+	right: 25px;
+	width: 35px;
+	height: 35px;
+	background-color: rgb(0, 26, 59);
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	box-sizing: border-box;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;  /* 横中央 */
+	align-items: center;      /* 縦中央 */
+	z-index: 10001;
+}
+
+/* ラッパーとして80%エリアを用意 */
+.hamburger-inner {
+	width: 60%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* 3本線の見た目 */
+.hamburger span {
+	display: block;
+	width: 100%;              /* ラッパーに対して100%（つまりボタンの80%） */
+	height: 3px;
+	background-color: #e7f4ff;
+	border-radius: 2px;
+	transition: all 0.3s ease;
+}
+
+
+/* ×マークへ変形 */
+.hamburger.active span:nth-child(1) {
+  	transform: translateY(7px) rotate(45deg) scale(0.85);
+}
+.hamburger.active span:nth-child(2) {
+  	opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  	transform: translateY(-7px) rotate(-45deg) scale(0.85);
+}
+
+/* オーバーレイメニュー */
+.hamburger-menu {
+  background-color: #f0f0f0;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+
+.hamburger-menu.open {
+  max-height: 1000px; /* メニューの最大高さを設定 */
+}
+
+.hamburger-menu ul {
+	list-style: none;
+	/*text-align: center;*/
+	padding: 0;
+	margin: 0;
+}
+
+.hamburger-menu .menu-item {
+  margin: 4px 16px;
+}
+
+.hamburger-menu .menu-item a {
+  display: block;
+  padding: 12px 16px;
+  background-color: #004080;        /* ボタンの背景色 */
+  color: #fff;                      /* テキスト色 */
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* ホバー時の効果 */
+.hamburger-menu .menu-item a:hover {
+  background-color: #0066cc;
+  transform: scale(1.02);
+}
+
+/* メニュー表示状態 */
+.hamburger-menu.active {
+  transform: translateY(0);
+}
+
+/* コンテンツラッパー */
+.content-wrapper {
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+#cancel-button {
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #ff5555;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#qrButton {
+  background-color: #2eabff;  /* 青背景 */
+  color: #fff;                /* 白文字 */
+  border: 5px solid #ffbd2e;  /* 黄色い枠線を追加 */
+  border-radius: 6px;
+  padding: 12px 16px;
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#video {
+  display: none; /* デフォルトは非表示 */
+  position: fixed; /* 固定表示で中央に配置 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;  /* ビューポート幅の80% */
+  max-width: 400px;
+  height: auto;
+  z-index: 1000;  /* メニューや他の要素より前に */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background: black;
+}
+
+#canvas {
+  display: none;
+}
+
+#video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 900;
+  display: none;
+}
+

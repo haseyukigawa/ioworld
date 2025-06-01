@@ -1,0 +1,219 @@
+body {
+	font-family: sans-serif;
+	background-color: #f0f8ff;
+	margin: 0;
+	padding: 1em;
+	font-size: 16px;
+}
+
+.header-container {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	margin-top: 1px;
+	overflow: hidden; /* はみ出し防止 */
+	white-space: nowrap;
+}
+
+.header-container h1 {
+	display: inline-block;
+	font-size: clamp(0.5rem, 7vw, 2rem);
+	max-width: 100%;
+	margin-top: 0.5rem;
+	margin-bottom: 0.1rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+img.main-photo {
+	width: 100%;
+	max-width: 500px;
+	height: auto;
+	border-radius: 10px;
+	margin: 0 auto 1em;
+	display: block;
+	object-fit: contain;
+}
+
+.scroll-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgb(0, 61, 141);
+	border: none;
+	cursor: pointer;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	user-select: none;
+}
+.scroll-btn svg {
+  	display: block;
+}
+
+.scroll-btn:disabled {
+  	background-color: rgba(0,0,0,0.2);
+  	cursor: default;
+}
+.scroll-left {
+  	left: 0;
+}
+.scroll-right {
+  	right: 0;
+}
+
+.tabs-wrapper {
+	position: relative;
+	margin-bottom: 1em;
+	padding: 0 44px;
+	overflow: hidden;
+}
+
+.tabs {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 8px;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 4px;
+	scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar {
+  	height: 0px;
+}
+
+.tabs.show-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: #0099cc transparent;
+}
+.tabs.show-scrollbar::-webkit-scrollbar {
+  	height: 6px;
+}
+.tabs.show-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #0099cc;
+	border-radius: 3px;
+}
+.tabs.show-scrollbar::-webkit-scrollbar-track {
+ 	 background: transparent;
+}
+
+.tabs button {
+	flex: 0 0 auto;
+	padding: 14px;
+	font-size: 16px;
+	background-color: #d0eaff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.tabs button.active {
+	background-color: #0099cc;
+	color: white;
+}
+
+.tab-content {
+	display: none;
+	background: #ffffff;
+	padding: 1em;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	transition: height 1.0s ease;
+}
+
+.tab-content.active {
+  	display: block;
+}
+
+.keeper-photo {
+	width: 100px;
+	height: auto;
+	border-radius: 50%;
+	display: block;
+	margin: 1em auto;
+}
+
+.keeper-name {
+	text-align: center;
+	font-weight: bold;
+	margin-top: -0.5em;
+}
+
+.footer {
+	text-align: center;
+	padding: 10px 0;
+	background-color: #f2f2f2;
+	color: #333;
+	font-size: 14px;
+	position: relative;
+}
+
+@media (max-width: 600px) {
+	.tabs button {
+		font-size: 16px;
+		padding: 12px;
+	}
+}
+
+.options button {
+	display: block;
+	margin: 8px 0;
+	padding: 12px;
+	font-size: 16px;
+	width: 100%;
+	max-width: 500px;
+	text-align: left;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	background-color: #f9f9f9;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.options button.correct {
+	background-color: #d4edda;
+	border-color: #28a745;
+	color: #155724;
+}
+
+.options button.incorrect {
+	background-color: #f8d7da;
+	border-color: #dc3545;
+	color: #721c24;
+}
+
+.question {
+	font-size: 20px;     /* お好みのサイズに調整できます */
+	font-weight: bold;   /* 必要に応じて太字に */
+	margin-bottom: 10px; /* 質問と選択肢の間に少し余白 */
+}
+
+.feedback {
+	margin-top: 0.2em;
+	margin-bottom: 1.5em;
+	font-size: 15px;
+	color: #333;
+	word-break: break-word;
+	white-space: normal;
+	line-height: 1.6;
+}
+
+.habitat-map {
+	max-width: 100%;
+	height: auto;
+	border: 1px solid #ccc;
+	margin-top: 1em;
+	border-radius: 8px;
+}
+
+#area p {
+	margin-bottom: 1.0em;
+}

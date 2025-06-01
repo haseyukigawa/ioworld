@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+        <html lang="ja">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>ネオンテトラ紹介ページ</title>
+            <link rel="stylesheet" href="../000_scripts/reset.css" />
+            <link rel="stylesheet" href="../000_scripts/main_style.css" />
+            <link rel="stylesheet" href="../000_scripts/menu.css" />
+            <script src="../000_scripts/main_script.js" defer></script>
+            <script src="../000_scripts/menu.js" defer></script>
+            <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+        </head>
+        <body>
+            <div class="header">
+                <a href="https://ioworld.jp/">
+                    <img src="../001_images/001_main/main_title.png" alt="main_title" class="header-logo" />
+                </a>
+            </div>
+
+            <button class="hamburger" aria-label="メニュー">
+                <div class="hamburger-inner"><span></span><span></span><span></span></div>
+            </button>
+
+            <nav class="hamburger-menu hidden">
+                <ul>
+                    <li class="menu-item"><a id="qrButton" href="javascript:void(0)">QRコードを撮影して検索</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/information#01">営業案内</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/access">アクセス</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/floor1">展示マップ</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/regularevent">イベント</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/facilities/shop#restaurant">ショップ・レストラン</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/study#post-1475">教育・研究</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/information/group">団体のお客様</a></li>
+                    <li class="menu-item"><a>Language (Coming soon)</a></li>
+                </ul>
+            </nav>
+
+            
+            <div class="header-container">
+                <h1>ネオンテトラ</h1>
+            </div>
+            <div class="content-wrapper">
+                <img src="images/neon_tetra.jpg" alt="ネオンテトラ" class="main-photo">
+
+                <div class="tabs-wrapper">
+                    <button class="scroll-btn scroll-left" aria-label="左にスクロール" id="scrollLeftBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="18 21 3 12 18 3"></polyline>
+                        </svg>
+                    </button>
+                    <div class="tabs" id="tabsContainer">
+                        <button type="button" class="tablink active" data-tab="quick">特徴</button>
+                        <button type="button" class="tablink" data-tab="detail">くわしく</button>
+                        <button type="button" class="tablink" data-tab="comment">飼育員のひとこと</button>
+                        <button type="button" class="tablink" data-tab="area">生息地</button>
+                        <button type="button" class="tablink" data-tab="quiz">魚クイズ</button>
+                        <button type="button" class="tablink" data-tab="trivia">豆知識「へぇ〜！」</button>
+                        <button type="button" class="tablink" data-tab="exhibit">館内の展示位置</button>
+                    </div>
+                    <button type="button" class="scroll-btn scroll-right" aria-label="右にスクロール" id="scrollRightBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 21 21 12 6 3"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div id="quick" class="tab-content active">
+                    <p>ネオンテトラは体長3〜4cmの小さな熱帯魚で、青と赤のラインが特徴です。水槽の中でも目立つ存在です。</p>
+                </div>
+                <div id="detail" class="tab-content">
+                    <p>ネオンテトラは南米アマゾン川流域原産の淡水魚で、温和な性格をしており群れで行動します。水質には敏感ですが初心者にも人気のある種類です。適温は22〜27℃程度。</p>
+                </div>
+                <div id="comment" class="tab-content">
+                    <p>「水槽の中を華やかにしたいなら、この子たちが一番！みんなでスイスイ泳いでかわいいですよ〜」</p>
+                    <img src="../001_images/003_keeper_pictures/hasegawa.png" alt="飼育員写真" class="keeper-photo" />
+                    <p class="keeper-name">（飼育員 ゆっきー）</p>
+                </div>
+                <div id="area" class="tab-content">
+                    <p>アマゾン川(アマゾナス川)の流れの緩やかな場所に生息。自然では群れで泳いで身を守ります。</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31812064.993774258!2d-72.0154702!3d-3.4653053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e67bb04a79db7b%3A0xa1876d1c10a5cfb2!2sAmazon%20River!5e0!3m2!1sen!2sjp&hl=ja" 
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy">
+                    </iframe>
+                </div>
+
+                <div id="quiz" class="tab-content">
+                    <p class="question"><strong>Q1：</strong>ネオンテトラの青い光はなぜ光る？</p>
+                    <div class="options"
+                        data-correct-msg="✅ <strong>正解！</strong><br>ネオンテトラの青い光は、光の反射による構造色です。危険を避けたり仲間と合図を送るために使われます。"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「3.光の反射による構造色だから」</strong>です。危険回避や仲間との合図に使われます。">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. 体内の蛍光物質が発光しているから</button><button onclick="checkAnswer(this)" data-correct="false">2. 皮膚が化学反応で光るから</button><button onclick="checkAnswer(this)" data-correct="true">3. 光の反射による構造色だから</button>
+                    </div>
+                    <div id="feedback1" class="feedback"></div>
+
+                    <p class="question"><strong>Q2：</strong>ネオンテトラの体色に見られる「構造色」とは何ですか？</p>
+                    <div class="options"
+                        data-correct-msg="✅ <strong>正解！</strong><br>構造色は光の反射や干渉によって生じる色のことです。"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「2.光の反射や干渉による色」</strong>です。構造色とは光の反射や干渉による色です。">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. 体内の色素による色</button><button onclick="checkAnswer(this)" data-correct="true">2. 光の反射や干渉による色</button><button onclick="checkAnswer(this)" data-correct="false">3. 食べた餌の色が反映された色</button>
+                    </div>
+                    <div id="feedback2" class="feedback"></div>
+                </div>
+
+                <div id="trivia" class="tab-content">
+                    <p>ネオンテトラは一度に100個以上の卵を産みますが、親が卵を食べてしまうため、繁殖時には隔離が必要！</p>
+                </div>
+                <div id="exhibit" class="tab-content">
+                    <p>ネオンテトラは2階熱帯魚展示室の中央水槽にて展示しています。青と赤の美しい光が目印です。</p>
+                    <img src="../001_images/002_exhibit_location/99F_99.png" alt="展示場所" style="max-width:100%; border-radius:8px;" />
+                </div>
+                
+                <!-- フッター -->
+                <div class="footer">
+                    <p>いおワールド　かごしま水族館</p>
+                </div>
+            </div>
+
+        <button id="cancel-button" style="display: none;">キャンセル</button>
+        <div id="video-overlay" style="display: none;">
+            <div id="scan-frame"></div>
+        </div>
+        <video id="video" autoplay playsinline style="display: none;"></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+
+        </body>
+        </html>
+        
