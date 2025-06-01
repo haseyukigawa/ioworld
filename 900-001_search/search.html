@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+        <html lang="ja">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>検索ページ</title>
+            <link rel="stylesheet" href="../000_scripts/reset.css" />
+            <link rel="stylesheet" href="../000_scripts/main_style.css" />
+            <link rel="stylesheet" href="../000_scripts/menu.css" />
+            <link rel="stylesheet" href="search.css" />
+            <link rel="icon" href="../001_images/001_main/favicon.png" type="image/x-icon" />
+
+            <script src="../000_scripts/menu.js" defer></script>
+            <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+            <script src="search.js" defer></script>
+        </head>
+        <body>
+            <div class="header">
+                <a href="https://ioworld.jp/">
+                    <img src="../001_images/001_main/main_title.png" alt="main_title" class="header-logo" />
+                </a>
+            </div>
+
+            <button class="hamburger" aria-label="メニュー">
+                <div class="hamburger-inner"><span></span><span></span><span></span></div>
+            </button>
+
+            <nav class="hamburger-menu hidden">
+                <ul>
+                    <li class="menu-item"><a id="qrButton" href="javascript:void(0)">QRコードを撮影して検索</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/information#01">営業案内</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/access">アクセス</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/floor1">展示マップ</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/regularevent">イベント</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/facilities/shop#restaurant">ショップ・レストラン</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/study#post-1475">教育・研究</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/information/group">団体のお客様</a></li>
+                    <li class="menu-item"><a>Language (Coming soon)</a></li>
+                </ul>
+            </nav>
+
+    <div class="content-wrapper">
+        <h1>検索ページ</h1>
+
+        <div class="search-option">
+            <h2>① QRコードで検索</h2>
+            <p>カメラを起動してQRコードを読み取ってください。</p>
+            <p>画面右上にあるメニューからでもQRコードでの検索ができます。</p>
+            <button id="qrButtonSearch" class="qr-button">カメラ起動</button>
+
+        </div>
+
+        <div class="search-option">
+            <h2>② IDまたは名前で検索</h2>
+            <form id="name-search-form">
+            <input type="text" id="name-input" name="name" placeholder="IDまたは名前を入力してください" required />
+            <button type="submit">検索</button>
+            </form>
+            <div id="search-result"></div>
+        </div>
+
+
+        <!-- フッター -->
+        <div class="footer">
+            <p>いおワールド　かごしま水族館</p>
+        </div>
+    </div>
+
+<button id="cancel-button" style="display: none;">キャンセル</button>
+<div id="video-overlay" style="display: none;">
+    <div id="scan-frame"></div>
+</div>
+<video id="video" autoplay playsinline style="display: none;"></video>
+<canvas id="canvas" style="display:none;"></canvas>
+
+</body>
+</html>
