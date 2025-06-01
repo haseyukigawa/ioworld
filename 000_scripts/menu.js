@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // QRコード処理
-  const qrButton = document.getElementById("qrButton");
+  const qrButtons = document.querySelectorAll("#qrButton, #qrButtonSearch");
   const video = document.getElementById("video");
   const canvasElement = document.getElementById("canvas");
   const canvas = canvasElement.getContext("2d", { willReadFrequently: true });
@@ -21,23 +21,25 @@ document.addEventListener("DOMContentLoaded", function () {
   let scanning = false;
   let stream = null;
 
-  qrButton.addEventListener("click", async () => {
-    try {
-      overlay.style.display = "block";
-      video.style.display = "block";
-      cancelButton.style.display = "block"; // ✅ キャンセルボタン表示
-      canvasElement.style.display = "none";
+  qrButtons.forEach(qrButton => {
+    qrButton.addEventListener("click", async () => {
+      try {
+        overlay.style.display = "block";
+        video.style.display = "block";
+        cancelButton.style.display = "block";
+        canvasElement.style.display = "none";
 
-      stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
-      video.srcObject = stream;
-      video.setAttribute("playsinline", true); // iOS対応
+        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+        video.srcObject = stream;
+        video.setAttribute("playsinline", true);
 
-      scanning = true;
-      requestAnimationFrame(tick);
-    } catch (err) {
-      stopCamera();
-      alert("カメラの起動に失敗しました: " + err);
-    }
+        scanning = true;
+        requestAnimationFrame(tick);
+      } catch (err) {
+        stopCamera();
+        alert("カメラの起動に失敗しました: " + err);
+      }
+    });
   });
 
   cancelButton.addEventListener("click", () => {
