@@ -1,4 +1,18 @@
-﻿{"fish": [
-  {"id": "0", "kana": "ネオンテトラ", "hiragana": "ねおんてとら", "english": "neon tetra", "url": "\/100-000_neon_tetra\/neon_tetra.html"},
-  {"id": "1", "kana": "キハダ", "hiragana": "きはだ", "english": "kihada", "url": "\/100-001_kihada\/kihada.html"}
-]}
+{
+  "fish": [
+    {
+      "id": "0",
+      "kana": "ネオンテトラ",
+      "hiragana": "ねおんてとら",
+      "english": "neon tetra",
+      "url": "https://haseyukigawa.github.io/ioworld/100-000_neon_tetra/neon_tetra.html"
+    },
+    {
+      "id": "1",
+      "kana": "キハダ",
+      "hiragana": "きはだ",
+      "english": "kihada",
+      "url": "https://haseyukigawa.github.io/ioworld/100-001_kihada/kihada.html"
+    }
+  ]
+}
