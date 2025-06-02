@@ -1,18 +1,48 @@
-﻿{
-  "fish": [
-    {
-      "id": "0",
-      "kana": "ネオンテトラ",
-      "hiragana": "ねおんてとら",
-      "english": "neon tetra",
-      "url": "https://haseyukigawa.github.io/ioworld/100-000_neon_tetra/neon_tetra.html"
-    },
-    {
-      "id": "1",
-      "kana": "キハダ",
-      "hiragana": "きはだ",
-      "english": "kihada",
-      "url": "https://haseyukigawa.github.io/ioworld/100-001_kihada/kihada.html"
-    }
-  ]
-}
+﻿{"fish": [
+  {"id": "0", "kana": "True", "hiragana": "True", "english": "ネオンテトラ", "url": "ねおんてとら"},
+  {"id": "1", "kana": "True", "hiragana": "True", "english": "キハダ", "url": "きはだ"},
+  {"id": "2", "kana": "True", "hiragana": "True", "english": "モノノケトンガリサカダザメ", "url": "もののけとんがりさかだざめ"},
+  {"id": "3", "kana": "True", "hiragana": "True", "english": "トラフザメ", "url": "とらふざめ"},
+  {"id": "4", "kana": "True", "hiragana": "True", "english": "グルクマ", "url": "ぐるくま"},
+  {"id": "5", "kana": "True", "hiragana": "True", "english": "ジンベエザメ", "url": "じんべえざめ"},
+  {"id": "6", "kana": "True", "hiragana": "True", "english": "スマ", "url": "すま"},
+  {"id": "7", "kana": "True", "hiragana": "True", "english": "マダラトビエイ", "url": "まだらとびえい"},
+  {"id": "8", "kana": "True", "hiragana": "True", "english": "カツオ", "url": "かつお"},
+  {"id": "9", "kana": "True", "hiragana": "True", "english": "ゴマモンガラ", "url": "ごまもんがら"},
+  {"id": "10", "kana": "True", "hiragana": "True", "english": "オニダルマオコゼ", "url": "おにだるまおこぜ"},
+  {"id": "11", "kana": "True", "hiragana": "True", "english": "スミツキアトヒキテンジクダイ", "url": "すみつきあとひきてんじくだい"},
+  {"id": "12", "kana": "True", "hiragana": "True", "english": "チンアナゴ", "url": "ちんあなご"},
+  {"id": "13", "kana": "True", "hiragana": "True", "english": "ニシキアナゴ", "url": "にしきあなご"},
+  {"id": "201", "kana": "True", "hiragana": "True", "english": "ヘラジカハナヤサイサンゴ", "url": "へらじかはなやさいさんご"},
+  {"id": "202", "kana": "True", "hiragana": "True", "english": "イトヒキテンジクダイ", "url": "いとひきてんじくだい"},
+  {"id": "203", "kana": "True", "hiragana": "True", "english": "ミナミウミサボテン", "url": "みなみうみさぼてん"},
+  {"id": "204", "kana": "True", "hiragana": "True", "english": "アオヒトデ", "url": "あおひとで"},
+  {"id": "205", "kana": "True", "hiragana": "True", "english": "アカマツカサ", "url": "あかまつかさ"},
+  {"id": "101", "kana": "True", "hiragana": "True", "english": "アカハライモリ", "url": "あかはらいもり"},
+  {"id": "113", "kana": "True", "hiragana": "True", "english": "アカウミガメ", "url": "あかうみがめ"},
+  {"id": "114", "kana": "True", "hiragana": "True", "english": "モクズガニ", "url": "もくずがに"},
+  {"id": "115", "kana": "True", "hiragana": "True", "english": "ナマズ", "url": "なまず"},
+  {"id": "121", "kana": "True", "hiragana": "True", "english": "デンキウナギ", "url": "でんきうなぎ"},
+  {"id": "122", "kana": "True", "hiragana": "True", "english": "ピラルクー", "url": "ぴらるくー"},
+  {"id": "123", "kana": "True", "hiragana": "True", "english": "オヒルギ", "url": "おひるぎ"},
+  {"id": "124", "kana": "True", "hiragana": "True", "english": "トビハゼ", "url": "とびはぜ"},
+  {"id": "125", "kana": "True", "hiragana": "True", "english": "ハクセンシオマネキ", "url": "はくせんしおまねき"},
+  {"id": "126", "kana": "True", "hiragana": "True", "english": "ゴマフアザラシ", "url": "ごまふあざらし"},
+  {"id": "127", "kana": "True", "hiragana": "True", "english": "ハンドウイルカ", "url": "はんどういるか"},
+  {"id": "128", "kana": "True", "hiragana": "True", "english": "ツマジロナガウニ", "url": "つまじろながうに"},
+  {"id": "129", "kana": "True", "hiragana": "True", "english": "ムラサキウニ", "url": "むらさきうに"},
+  {"id": "130", "kana": "True", "hiragana": "True", "english": "オヤビッチャ", "url": "おやびっちゃ"},
+  {"id": "131", "kana": "True", "hiragana": "True", "english": "マダイ", "url": "まだい"},
+  {"id": "401", "kana": "True", "hiragana": "True", "english": "ミナミハタンポ", "url": "みなみはたんぽ"},
+  {"id": "402", "kana": "True", "hiragana": "True", "english": "アカオビハナダイ", "url": "あかおびはなだい"},
+  {"id": "403", "kana": "True", "hiragana": "True", "english": "ムチカラマツ", "url": "むちからまつ"},
+  {"id": "404", "kana": "True", "hiragana": "True", "english": "アミメハギ", "url": "あみめはぎ"},
+  {"id": "405", "kana": "True", "hiragana": "True", "english": "クロホシイシモチ", "url": "くろほしいしもち"},
+  {"id": "406", "kana": "True", "hiragana": "True", "english": "ネズミゴチ", "url": "ねずみごち"},
+  {"id": "407", "kana": "True", "hiragana": "True", "english": "アマモ", "url": "あまも"},
+  {"id": "408", "kana": "True", "hiragana": "True", "english": "キンセンイシモチ", "url": "きんせんいしもち"},
+  {"id": "409", "kana": "True", "hiragana": "True", "english": "ナガサキスズメダイ", "url": "ながさきすずめだい"},
+  {"id": "410", "kana": "True", "hiragana": "True", "english": "タギリカクレエビ", "url": "たぎりかくれえび"},
+  {"id": "411", "kana": "True", "hiragana": "True", "english": "サツマハオリムシ", "url": "さつまはおりむし"},
+  {"id": "303", "kana": "True", "hiragana": "True", "english": "オオウナギ", "url": "おおうなぎ"}
+]}
