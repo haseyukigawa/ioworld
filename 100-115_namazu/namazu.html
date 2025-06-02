@@ -3,7 +3,7 @@
         <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>ネオンテトラ紹介ページ</title>
+            <title>ナマズ紹介ページ</title>
             <link rel="stylesheet" href="../000_scripts/reset.css" />
             <link rel="stylesheet" href="../000_scripts/main_style.css" />
             <link rel="stylesheet" href="../000_scripts/menu.css" />
@@ -40,10 +40,10 @@
 
             
             <div class="header-container">
-                <h1>ネオンテトラ</h1>
+                <h1>ナマズ</h1>
             </div>
             <div class="content-wrapper">
-                <img src="../001_images/002_main_pictures/neon_tetra.jpg" alt="ネオンテトラ" class="main-photo">
+                <img src="../001_images/002_main_pictures/namazu.jpg" alt="ナマズ" class="main-photo">
 
                 <div class="tabs-wrapper">
                     <button class="scroll-btn scroll-left" aria-label="左にスクロール" id="scrollLeftBtn">
@@ -68,47 +68,50 @@
                 </div>
 
                 <div id="quick" class="tab-content active">
-                    <p>ネオンテトラは体長3〜4cmの小さな熱帯魚で、青と赤のラインが特徴です。水槽の中でも目立つ存在です。</p>
+                    <p>夜に活動する大きな魚で、65cmほどになります。</p>
                 </div>
                 <div id="detail" class="tab-content">
-                    <p>ネオンテトラは南米アマゾン川流域原産の淡水魚で、温和な性格をしており群れで行動します。水質には敏感ですが初心者にも人気のある種類です。適温は22〜27℃程度。</p>
+                    <p>口に鋭いトゲのような歯があり、カニ・魚・カエルなどを食べます。田んぼや流れのゆるい川で見られます。</p>
                 </div>
                 <div id="comment" class="tab-content">
-                    <p>「水槽の中を華やかにしたいなら、この子たちが一番！みんなでスイスイ泳いでかわいいですよ〜」</p>
-                    <img src="../001_images/003_keeper_pictures/hasegawa.png" alt="飼育員写真" class="keeper-photo" />
-                    <p class="keeper-name">（飼育員 ゆっきー）</p>
+                    <p>かごしま水族館では、流木の陰などでじっとしている姿が見られます。</p>
+                    <img src="../001_images/003_keeper_pictures/yuka.png" alt="飼育員写真" class="keeper-photo" />
+                    <p class="keeper-name">（飼育員 ゆうか）</p>
                 </div>
                 <div id="area" class="tab-content">
-                    <p>アマゾン川(アマゾナス川)の流れの緩やかな場所に生息。自然では群れで泳いで身を守ります。</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31812064.993774258!2d-72.0154702!3d-3.4653053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e67bb04a79db7b%3A0xa1876d1c10a5cfb2!2sAmazon%20River!5e0!3m2!1sen!2sjp&hl=ja" 
+                    <p>北海道南部〜九州南部の川や湖</p>
+                    <iframe src="" 
                         width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy">
                     </iframe>
                 </div>
 
                 <div id="quiz" class="tab-content">
-                    <p class="question"><strong>Q1：</strong>ネオンテトラの青い光はなぜ光る？</p>
+                    <p class="question"><strong>Q1：</strong>ナマズが動き出すのはいつ？</p>
                     <div class="options"
-                        data-correct-msg="✅ <strong>正解！</strong><br>ネオンテトラの青い光は、光の反射による構造色です。危険を避けたり仲間と合図を送るために使われます。"
-                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「3.光の反射による構造色だから」</strong>です。危険回避や仲間との合図に使われます。">
-                        <button onclick="checkAnswer(this)" data-correct="false">1. 体内の蛍光物質が発光しているから</button><button onclick="checkAnswer(this)" data-correct="false">2. 皮膚が化学反応で光るから</button><button onclick="checkAnswer(this)" data-correct="true">3. 光の反射による構造色だから</button>
+                        data-correct-msg="✅ <strong>正解！</strong><br>ナマズは夜行性で、夜にえさをさがします。"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「2.夜」</strong>です。昼間はじっとしています。">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. 昼間</button><button onclick="checkAnswer(this)" data-correct="true">2. 夜</button><button onclick="checkAnswer(this)" data-correct="false">3. 朝</button>
                     </div>
                     <div id="feedback1" class="feedback"></div>
 
-                    <p class="question"><strong>Q2：</strong>ネオンテトラの体色に見られる「構造色」とは何ですか？</p>
+                    <p class="question"><strong>Q2：</strong>ナマズの歯の特徴は？</p>
                     <div class="options"
-                        data-correct-msg="✅ <strong>正解！</strong><br>構造色は光の反射や干渉によって生じる色のことです。"
-                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「2.光の反射や干渉による色」</strong>です。構造色とは光の反射や干渉による色です。">
-                        <button onclick="checkAnswer(this)" data-correct="false">1. 体内の色素による色</button><button onclick="checkAnswer(this)" data-correct="true">2. 光の反射や干渉による色</button><button onclick="checkAnswer(this)" data-correct="false">3. 食べた餌の色が反映された色</button>
+                        data-correct-msg="✅ <strong>正解！</strong><br>トゲのような小さな歯で獲物をはなさないのです。"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「2.鋭いトゲのような歯がある」</strong>です。ナマズの口の中は意外とこわいです。">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. とてもやわらかい</button><button onclick="checkAnswer(this)" data-correct="true">2. 鋭いトゲのような歯がある</button><button onclick="checkAnswer(this)" data-correct="false">3. 人間のような歯がある</button>
                     </div>
                     <div id="feedback2" class="feedback"></div>
                 </div>
 
                 <div id="trivia" class="tab-content">
-                    <p>ネオンテトラは一度に100個以上の卵を産みますが、親が卵を食べてしまうため、繁殖時には隔離が必要！</p>
+                    <p>ナマズは雷の前に動きが活発になると言われ、昔は「地震ナマズ」とも呼ばれました。</p>
                 </div>
                 <div id="exhibit" class="tab-content">
-                    <p>ネオンテトラは2階熱帯魚展示室の中央水槽にて展示しています。青と赤の美しい光が目印です。</p>
-                    <img src="../001_images/004_exhibit_location/99F_99.png" alt="展示場所" style="max-width:100%; border-radius:8px;" />
+                    <p>「水辺・発見・体験」をキーワードに、子どもたちが楽しみながら体験して学べるコーナーです。
+海辺や小川のジオラマの中にかくれている生きものを探したり、岩そっくりのふたをめくると現れる観察箱の生きものをじっくり観察したりすることができます。
+不思議がいっぱいの貝やカニの体を観察することもできます。ジンベエザメの形をした「ジンベエハウス」では水族館職員が集めた宝物を見つけてみましょう。
+子どもたちだけではなく大人も楽しめるような工夫をこらし、いつも何か新しい発見を準備して皆さんをお待ちしています。</p>
+                    <img src="../001_images/004_exhibit_location/1F_2.png" alt="展示場所" style="max-width:100%; border-radius:8px;" />
                 </div>
                 
                 <!-- フッター -->

@@ -3,7 +3,7 @@
         <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>ネオンテトラ紹介ページ</title>
+            <title>ピラルクー紹介ページ</title>
             <link rel="stylesheet" href="../000_scripts/reset.css" />
             <link rel="stylesheet" href="../000_scripts/main_style.css" />
             <link rel="stylesheet" href="../000_scripts/menu.css" />
@@ -40,10 +40,10 @@
 
             
             <div class="header-container">
-                <h1>ネオンテトラ</h1>
+                <h1>ピラルクー</h1>
             </div>
             <div class="content-wrapper">
-                <img src="../001_images/002_main_pictures/neon_tetra.jpg" alt="ネオンテトラ" class="main-photo">
+                <img src="../001_images/002_main_pictures/piraruku.jpg" alt="ピラルクー" class="main-photo">
 
                 <div class="tabs-wrapper">
                     <button class="scroll-btn scroll-left" aria-label="左にスクロール" id="scrollLeftBtn">
@@ -68,47 +68,50 @@
                 </div>
 
                 <div id="quick" class="tab-content active">
-                    <p>ネオンテトラは体長3〜4cmの小さな熱帯魚で、青と赤のラインが特徴です。水槽の中でも目立つ存在です。</p>
+                    <p>世界最大の淡水魚で、全長4m、体重200kgにもなります。</p>
                 </div>
                 <div id="detail" class="tab-content">
-                    <p>ネオンテトラは南米アマゾン川流域原産の淡水魚で、温和な性格をしており群れで行動します。水質には敏感ですが初心者にも人気のある種類です。適温は22〜27℃程度。</p>
+                    <p>うきぶくろが肺のような構造で空気呼吸をします。約1億年前から姿がほとんど変わっていないため「生きた化石」とも呼ばれます。</p>
                 </div>
                 <div id="comment" class="tab-content">
-                    <p>「水槽の中を華やかにしたいなら、この子たちが一番！みんなでスイスイ泳いでかわいいですよ〜」</p>
+                    <p>巨大な体と赤い体色が特徴的で、水面から口を出して空気呼吸する姿は圧巻です。</p>
                     <img src="../001_images/003_keeper_pictures/hasegawa.png" alt="飼育員写真" class="keeper-photo" />
                     <p class="keeper-name">（飼育員 ゆっきー）</p>
                 </div>
                 <div id="area" class="tab-content">
-                    <p>アマゾン川(アマゾナス川)の流れの緩やかな場所に生息。自然では群れで泳いで身を守ります。</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31812064.993774258!2d-72.0154702!3d-3.4653053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e67bb04a79db7b%3A0xa1876d1c10a5cfb2!2sAmazon%20River!5e0!3m2!1sen!2sjp&hl=ja" 
+                    <p>南米のアマゾン川流域</p>
+                    <iframe src="" 
                         width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy">
                     </iframe>
                 </div>
 
                 <div id="quiz" class="tab-content">
-                    <p class="question"><strong>Q1：</strong>ネオンテトラの青い光はなぜ光る？</p>
+                    <p class="question"><strong>Q1：</strong>ピラルクーはどこで暮らしているでしょう？</p>
                     <div class="options"
-                        data-correct-msg="✅ <strong>正解！</strong><br>ネオンテトラの青い光は、光の反射による構造色です。危険を避けたり仲間と合図を送るために使われます。"
-                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「3.光の反射による構造色だから」</strong>です。危険回避や仲間との合図に使われます。">
-                        <button onclick="checkAnswer(this)" data-correct="false">1. 体内の蛍光物質が発光しているから</button><button onclick="checkAnswer(this)" data-correct="false">2. 皮膚が化学反応で光るから</button><button onclick="checkAnswer(this)" data-correct="true">3. 光の反射による構造色だから</button>
+                        data-correct-msg="✅ <strong>正解！</strong><br>"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「2.川」</strong>です。">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. 海</button><button onclick="checkAnswer(this)" data-correct="true">2. 川</button><button onclick="checkAnswer(this)" data-correct="false">3. 湖</button>
                     </div>
                     <div id="feedback1" class="feedback"></div>
 
-                    <p class="question"><strong>Q2：</strong>ネオンテトラの体色に見られる「構造色」とは何ですか？</p>
+                    <p class="question"><strong>Q2：</strong>ピラルクーが「生きた化石」と呼ばれる理由は？</p>
                     <div class="options"
-                        data-correct-msg="✅ <strong>正解！</strong><br>構造色は光の反射や干渉によって生じる色のことです。"
-                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「2.光の反射や干渉による色」</strong>です。構造色とは光の反射や干渉による色です。">
-                        <button onclick="checkAnswer(this)" data-correct="false">1. 体内の色素による色</button><button onclick="checkAnswer(this)" data-correct="true">2. 光の反射や干渉による色</button><button onclick="checkAnswer(this)" data-correct="false">3. 食べた餌の色が反映された色</button>
+                        data-correct-msg="✅ <strong>正解！</strong><br>"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「3.約1億年前から姿がほとんど変わっていないから」</strong>です。">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. 骨が石のように硬いから</button><button onclick="checkAnswer(this)" data-correct="false">2. 化石のような模様があるから</button><button onclick="checkAnswer(this)" data-correct="true">3. 約1億年前から姿がほとんど変わっていないから</button>
                     </div>
                     <div id="feedback2" class="feedback"></div>
                 </div>
 
                 <div id="trivia" class="tab-content">
-                    <p>ネオンテトラは一度に100個以上の卵を産みますが、親が卵を食べてしまうため、繁殖時には隔離が必要！</p>
+                    <p>ピラルクーはワシントン条約で国際的な商取引が規制されています。</p>
                 </div>
                 <div id="exhibit" class="tab-content">
-                    <p>ネオンテトラは2階熱帯魚展示室の中央水槽にて展示しています。青と赤の美しい光が目印です。</p>
-                    <img src="../001_images/004_exhibit_location/99F_99.png" alt="展示場所" style="max-width:100%; border-radius:8px;" />
+                    <p>アマゾン川流域に生息するピラルクーを展示しています。
+ピラルクーは世界最大の淡水魚と言われ、現地では４ｍを超えることもあります。うきぶくろがほ乳類の肺と同じような仕組みとなっており、空気呼吸をします。そのため時折水面に上がって口から空気を吸う様子を見ることができます。
+
+毎週土曜日の午後12:45からイベント「ピラルクーの食事の時間」を行なっています。</p>
+                    <img src="../001_images/004_exhibit_location/1F_4.png" alt="展示場所" style="max-width:100%; border-radius:8px;" />
                 </div>
                 
                 <!-- フッター -->

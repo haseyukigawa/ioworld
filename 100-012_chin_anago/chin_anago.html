@@ -3,7 +3,7 @@
         <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>ネオンテトラ紹介ページ</title>
+            <title>チンアナゴ紹介ページ</title>
             <link rel="stylesheet" href="../000_scripts/reset.css" />
             <link rel="stylesheet" href="../000_scripts/main_style.css" />
             <link rel="stylesheet" href="../000_scripts/menu.css" />
@@ -40,10 +40,10 @@
 
             
             <div class="header-container">
-                <h1>ネオンテトラ</h1>
+                <h1>チンアナゴ</h1>
             </div>
             <div class="content-wrapper">
-                <img src="../001_images/002_main_pictures/neon_tetra.jpg" alt="ネオンテトラ" class="main-photo">
+                <img src="../001_images/002_main_pictures/chin_anago.jpg" alt="チンアナゴ" class="main-photo">
 
                 <div class="tabs-wrapper">
                     <button class="scroll-btn scroll-left" aria-label="左にスクロール" id="scrollLeftBtn">
@@ -68,47 +68,48 @@
                 </div>
 
                 <div id="quick" class="tab-content active">
-                    <p>ネオンテトラは体長3〜4cmの小さな熱帯魚で、青と赤のラインが特徴です。水槽の中でも目立つ存在です。</p>
+                    <p>白い体に細かい黒点があり、えらぶたと肛門間に大きな黒斑が5つあります。</p>
                 </div>
                 <div id="detail" class="tab-content">
-                    <p>ネオンテトラは南米アマゾン川流域原産の淡水魚で、温和な性格をしており群れで行動します。水質には敏感ですが初心者にも人気のある種類です。適温は22〜27℃程度。</p>
+                    <p>南日本太平洋岸〜琉球列島、インド・西太平洋に分布。砂地に穴を掘り、流れるプランクトンを食べます。危険を感じると穴に潜ります。</p>
                 </div>
                 <div id="comment" class="tab-content">
-                    <p>「水槽の中を華やかにしたいなら、この子たちが一番！みんなでスイスイ泳いでかわいいですよ〜」</p>
+                    <p>かごしま水族館ではブラインシュリンプを長時間少しずつ与え、体を見せる工夫をしています。</p>
                     <img src="../001_images/003_keeper_pictures/hasegawa.png" alt="飼育員写真" class="keeper-photo" />
                     <p class="keeper-name">（飼育員 ゆっきー）</p>
                 </div>
                 <div id="area" class="tab-content">
-                    <p>アマゾン川(アマゾナス川)の流れの緩やかな場所に生息。自然では群れで泳いで身を守ります。</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31812064.993774258!2d-72.0154702!3d-3.4653053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e67bb04a79db7b%3A0xa1876d1c10a5cfb2!2sAmazon%20River!5e0!3m2!1sen!2sjp&hl=ja" 
+                    <p>南日本太平洋岸〜琉球列島</p>
+                    <iframe src="" 
                         width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy">
                     </iframe>
                 </div>
 
                 <div id="quiz" class="tab-content">
-                    <p class="question"><strong>Q1：</strong>ネオンテトラの青い光はなぜ光る？</p>
+                    <p class="question"><strong>Q1：</strong>チンアナゴは危険を感じたらどうする？</p>
                     <div class="options"
-                        data-correct-msg="✅ <strong>正解！</strong><br>ネオンテトラの青い光は、光の反射による構造色です。危険を避けたり仲間と合図を送るために使われます。"
-                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「3.光の反射による構造色だから」</strong>です。危険回避や仲間との合図に使われます。">
-                        <button onclick="checkAnswer(this)" data-correct="false">1. 体内の蛍光物質が発光しているから</button><button onclick="checkAnswer(this)" data-correct="false">2. 皮膚が化学反応で光るから</button><button onclick="checkAnswer(this)" data-correct="true">3. 光の反射による構造色だから</button>
+                        data-correct-msg="✅ <strong>正解！</strong><br>穴の中に隠れて身を守ります。"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「1.穴に潜る」</strong>です。他は間違いです。">
+                        <button onclick="checkAnswer(this)" data-correct="true">1. 穴に潜る</button><button onclick="checkAnswer(this)" data-correct="false">2. 逃げる</button><button onclick="checkAnswer(this)" data-correct="false">3. 水面に出る</button>
                     </div>
                     <div id="feedback1" class="feedback"></div>
 
-                    <p class="question"><strong>Q2：</strong>ネオンテトラの体色に見られる「構造色」とは何ですか？</p>
+                    <p class="question"><strong>Q2：</strong>チンアナゴは何を食べる？</p>
                     <div class="options"
-                        data-correct-msg="✅ <strong>正解！</strong><br>構造色は光の反射や干渉によって生じる色のことです。"
-                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「2.光の反射や干渉による色」</strong>です。構造色とは光の反射や干渉による色です。">
-                        <button onclick="checkAnswer(this)" data-correct="false">1. 体内の色素による色</button><button onclick="checkAnswer(this)" data-correct="true">2. 光の反射や干渉による色</button><button onclick="checkAnswer(this)" data-correct="false">3. 食べた餌の色が反映された色</button>
+                        data-correct-msg="✅ <strong>正解！</strong><br>主に動物プランクトンを食べています。"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「1.動物プランクトン」</strong>です。他は誤りです。">
+                        <button onclick="checkAnswer(this)" data-correct="true">1. 動物プランクトン</button><button onclick="checkAnswer(this)" data-correct="false">2. 海藻</button><button onclick="checkAnswer(this)" data-correct="false">3. 小さな魚</button>
                     </div>
                     <div id="feedback2" class="feedback"></div>
                 </div>
 
                 <div id="trivia" class="tab-content">
-                    <p>ネオンテトラは一度に100個以上の卵を産みますが、親が卵を食べてしまうため、繁殖時には隔離が必要！</p>
+                    <p>名前は犬のチンに似ている顔つきが由来と言われています。</p>
                 </div>
                 <div id="exhibit" class="tab-content">
-                    <p>ネオンテトラは2階熱帯魚展示室の中央水槽にて展示しています。青と赤の美しい光が目印です。</p>
-                    <img src="../001_images/004_exhibit_location/99F_99.png" alt="展示場所" style="max-width:100%; border-radius:8px;" />
+                    <p>鹿児島県本土の南にのびるサンゴ礁の島々「南西諸島」周辺にくらす生きものたちを展示しています。
+それぞれの水槽では奄美大島を中心としたさまざまな海中環境を再現し、いろどり鮮やかな魚類だけでなく、サンゴや海藻、ヒトデ、ナマコのなかまなどサンゴ礁に暮らす生きものの多様なくらしを紹介しています。</p>
+                    <img src="../001_images/004_exhibit_location/2F_2.png" alt="展示場所" style="max-width:100%; border-radius:8px;" />
                 </div>
                 
                 <!-- フッター -->
