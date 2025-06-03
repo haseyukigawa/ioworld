@@ -1,15 +1,32 @@
 let fishData = [];
+let isListVisible = false;
 
-// JSONファイルの読み込み（ページ読み込み時）
+function getGroupChar(char) {
+  const groups = {
+    'あ': 'あいうえお',
+    'か': 'かきくけこがぎぐげご',
+    'さ': 'さしすせそざじずぜぞ',
+    'た': 'たちつてとだぢづでど',
+    'な': 'なにぬねの',
+    'は': 'はひふへほばびぶべぼぱぴぷぺぽ',
+    'ま': 'まみむめも',
+    'や': 'やゆよ',
+    'ら': 'らりるれろ',
+    'わ': 'わをん'
+  };
+  for (const key in groups) {
+    if (groups[key].includes(char)) return key;
+  }
+  return 'その他';
+}
+
 fetch('fish_data.json')
   .then(response => response.json())
   .then(data => {
     fishData = data.fish;
 
-    // ② 名前検索機能
     document.getElementById('name-search-form').addEventListener('submit', function (e) {
       e.preventDefault();
-
       const input = document.getElementById('name-input').value.trim().toLowerCase();
       const resultDiv = document.getElementById('search-result');
       resultDiv.innerHTML = '';
@@ -20,7 +37,7 @@ fetch('fish_data.json')
       }
 
       const results = fishData.filter(f =>
-        f.id.toString().toLowerCase().includes(input) ||
+        f.id.toLowerCase().includes(input) ||
         f.kana.toLowerCase().includes(input) ||
         f.hiragana.toLowerCase().includes(input) ||
         f.english.toLowerCase().includes(input)
@@ -40,73 +57,92 @@ fetch('fish_data.json')
       resultDiv.appendChild(ul);
     });
 
-    // ③ 一覧表示機能（五十音ごとにグループ分け・トグル表示）
-    const showListButton = document.getElementById('show-list-button');
-    const itemList = document.getElementById('item-list');
+    document.getElementById('show-list-button').addEventListener('click', () => {
+      const resultDiv = document.getElementById('search-result');
+      const listUL = document.getElementById('item-list');
 
-    if (showListButton && itemList) {
-      showListButton.addEventListener('click', () => {
-        if (itemList.style.display === 'block') {
-          // 一覧が表示されていれば非表示にする
-          itemList.style.display = 'none';
-          showListButton.textContent = '一覧を表示';
-          itemList.innerHTML = ''; // コンテンツもクリア（お好みで）
+      // 検索結果を消す
+      resultDiv.innerHTML = '';
+      listUL.innerHTML = '';
+
+      if (isListVisible) {
+        listUL.style.display = 'none';
+        isListVisible = false;
+        return;
+      }
+
+      const groupLabels = {
+        'あ': 'あいうえお',
+        'か': 'かきくけこがぎぐげご',
+        'さ': 'さしすせそざじずぜぞ',
+        'た': 'たちつてとだぢづでど',
+        'な': 'なにぬねの',
+        'は': 'はひふへほばびぶべぼぱぴぷぺぽ',
+        'ま': 'まみむめも',
+        'や': 'やゆよ',
+        'ら': 'らりるれろ',
+        'わ': 'わをん',
+        'その他': ''
+      };
+
+      // grouped[group][char] = [fish, ...]
+      const grouped = {};
+      for (const group in groupLabels) {
+        grouped[group] = {};
+        for (const ch of groupLabels[group]) {
+          grouped[group][ch] = [];
+        }
+      }
+
+      fishData.forEach(fish => {
+        const firstChar = fish.hiragana.charAt(0);
+        const groupKey = getGroupChar(firstChar);
+        if (groupKey in grouped && firstChar in grouped[groupKey]) {
+          grouped[groupKey][firstChar].push(fish);
         } else {
-          // 一覧を生成して表示する
-          itemList.innerHTML = '';
-
-          const gojuonMap = {};
-          const sortedData = [...fishData].sort((a, b) =>
-            a.hiragana.localeCompare(b.hiragana, 'ja')
-          );
-
-          sortedData.forEach(fish => {
-            const initial = fish.hiragana.charAt(0);
-            if (!gojuonMap[initial]) {
-              gojuonMap[initial] = [];
-            }
-            gojuonMap[initial].push(fish);
-          });
-
-          const gojuonOrder = [
-            'あ', 'い', 'う', 'え', 'お',
-            'か', 'き', 'く', 'け', 'こ',
-            'さ', 'し', 'す', 'せ', 'そ',
-            'た', 'ち', 'つ', 'て', 'と',
-            'な', 'に', 'ぬ', 'ね', 'の',
-            'は', 'ひ', 'ふ', 'へ', 'ほ',
-            'ま', 'み', 'む', 'め', 'も',
-            'や', 'ゆ', 'よ',
-            'ら', 'り', 'る', 'れ', 'ろ',
-            'わ', 'を', 'ん'
-          ];
-
-          gojuonOrder.forEach(initial => {
-            if (gojuonMap[initial]) {
-              const header = document.createElement('h3');
-              header.textContent = initial;
-              itemList.appendChild(header);
-
-              const ul = document.createElement('ul');
-              ul.style.listStyle = 'none';
-              ul.style.paddingLeft = '1em';
-
-              gojuonMap[initial].forEach(fish => {
-                const li = document.createElement('li');
-                li.innerHTML = `<a href="${fish.url}">${fish.kana}</a>`;
-                ul.appendChild(li);
-              });
-
-              itemList.appendChild(ul);
-            }
-          });
-
-          itemList.style.display = 'block';
-          showListButton.textContent = '一覧を閉じる';
+          if (!grouped['その他']['']) grouped['その他'][''] = [];
+          grouped['その他'][''].push(fish);
         }
       });
-    }
 
+      const groupOrder = ['あ', 'か', 'さ', 'た', 'な', 'は', 'ま', 'や', 'ら', 'わ'];
+
+      groupOrder.forEach(group => {
+        // グループタイトル (例：あ)
+        const groupTitle = document.createElement('div');
+        groupTitle.textContent = group;
+        groupTitle.className = 'fish-group-label';  // クラス名を付与
+        listUL.appendChild(groupTitle);
+
+        for (const ch of groupLabels[group]) {
+          const fishes = grouped[group][ch];
+          if (fishes.length === 0) continue;
+
+          // 小グループラベル（あいうえおの1文字）
+          const charTitle = document.createElement('div');
+          charTitle.textContent = ch;
+          charTitle.style.fontWeight = 'bold';
+          charTitle.style.marginLeft = '0.2em';
+          charTitle.style.marginBottom = '0.2em';
+          listUL.appendChild(charTitle);
+
+          // それぞれの魚はliで1行ずつ
+          fishes.forEach(fish => {
+            const li = document.createElement('li');
+            li.style.marginLeft = '2.0em';
+            li.style.listStyle = 'disc';
+            li.style.marginBottom = '0.1em';
+
+            li.innerHTML = `<a href="${fish.url}">${fish.kana}</a>`;
+            //li.innerHTML = `<a href="${fish.url}">${fish.kana} / ${fish.english}</a>`;
+            listUL.appendChild(li);
+          });
+        }
+      });
+
+      listUL.style.display = 'block';
+      isListVisible = true;
+    });
   })
   .catch(error => {
     console.error('JSONの読み込みエラー:', error);
