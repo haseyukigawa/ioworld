@@ -9,7 +9,7 @@ h1 {
     border-radius: 10px;
     padding: 1em;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 .search-option h2 {
@@ -64,5 +64,17 @@ input[type="file"] {
 }
 
 #search-result a:hover {
+  text-decoration: underline;
+}
+
+#item-list li {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+#item-list li a {
+  color: #0073aa;
+  text-decoration: none;
+}
+#item-list li a:hover {
   text-decoration: underline;
 }
