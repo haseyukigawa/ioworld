@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+        <html lang="ja">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>マダイ紹介ページ</title>
+            <link rel="stylesheet" href="../000_scripts/reset.css" />
+            <link rel="stylesheet" href="../000_scripts/main_style.css" />
+            <link rel="stylesheet" href="../000_scripts/menu.css" />
+            <link rel="icon" href="../001_images/001_main/favicon.png" type="image/x-icon" />
+            <script src="../000_scripts/main_script.js" defer></script>
+            <script src="../000_scripts/menu.js" defer></script>
+            <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+        </head>
+        <body>
+            <div class="header">
+                <a href="https://ioworld.jp/">
+                    <img src="../001_images/001_menu/main_title.png" alt="main_title" class="header-logo" />
+                </a>
+            </div>
+
+            <button class="hamburger" aria-label="メニュー">
+                <div class="hamburger-inner"><span></span><span></span><span></span></div>
+            </button>
+
+            <nav class="hamburger-menu hidden">
+                <ul>
+                    <li class="menu-item"><a id="qrButton" href="javascript:void(0)">QRコードを撮影して検索</a></li>
+                    <li class="menu-item"><a href="https://haseyukigawa.github.io/ioworld/900-001_search/search.html">お魚検索</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/information#01">営業案内</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/access">アクセス</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/floor1">展示マップ</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/regularevent">イベント</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/facilities/shop#restaurant">ショップ・レストラン</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/study#post-1475">教育・研究</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/information/group">団体のお客様</a></li>
+                    <li class="menu-item"><a>Language (Coming soon)</a></li>
+                </ul>
+            </nav>
+
+            
+            <div class="header-container">
+                <h1>マダイ</h1>
+            </div>
+            <div class="content-wrapper">
+                <img src="../001_images/002_main_pictures/madai.jpg" alt="マダイ" class="main-photo">
+
+                <div class="tabs-wrapper">
+                    <button class="scroll-btn scroll-left" aria-label="左にスクロール" id="scrollLeftBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="18 21 3 12 18 3"></polyline>
+                        </svg>
+                    </button>
+                    <div class="tabs" id="tabsContainer">
+                        <button type="button" class="tablink active" data-tab="quick">特徴</button>
+                        <button type="button" class="tablink" data-tab="detail">くわしく</button>
+                        <button type="button" class="tablink" data-tab="comment">飼育員のひとこと</button>
+                        <button type="button" class="tablink" data-tab="area">生息地</button>
+                        <button type="button" class="tablink" data-tab="quiz">お魚クイズ</button>
+                        <button type="button" class="tablink" data-tab="trivia">豆知識「へぇ〜！」</button>
+                        <button type="button" class="tablink" data-tab="exhibit">館内の展示位置</button>
+                    </div>
+                    <button type="button" class="scroll-btn scroll-right" aria-label="右にスクロール" id="scrollRightBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 21 21 12 6 3"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div id="quick" class="tab-content active">
+                    <p>春になると産卵のために沿岸にやってくる魚です。</p>
+                </div>
+                <div id="detail" class="tab-content">
+                    <p>錦江湾では大型のマダイが集まり、「入りダイ」と呼ばれて親しまれています。</p>
+                </div>
+                <div id="comment" class="tab-content">
+                    <p>春は錦江湾に多くのマダイが集まり、釣り人でにぎわいます。</p>
+                    <img src="../001_images/003_keeper_pictures/hasegawa.png" alt="飼育員写真" class="keeper-photo" />
+                    <p class="keeper-name">（飼育員 ゆっきー）</p>
+                </div>
+                <div id="area" class="tab-content">
+                    <p>錦江湾など水深30〜50mの沿岸</p>
+                    <iframe src="" 
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy">
+                    </iframe>
+                </div>
+
+                <div id="quiz" class="tab-content">
+                    <p class="question"><strong>Q1：</strong>マダイがたくさん集まるのはいつ？</p>
+                    <div class="options"
+                        data-correct-msg="✅ <strong>正解！</strong><br>春は産卵のために集まってきます。"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「2.春」</strong>です。春がマダイの繁殖期なんだよ。">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. 夏</button><button onclick="checkAnswer(this)" data-correct="true">2. 春</button><button onclick="checkAnswer(this)" data-correct="false">3. 冬</button>
+                    </div>
+                    <div id="feedback1" class="feedback"></div>
+
+                    <p class="question"><strong>Q2：</strong>「入りダイ」とはどんなマダイ？</p>
+                    <div class="options"
+                        data-correct-msg="✅ <strong>正解！</strong><br>「入りダイ」は外から湾に入ってくるマダイのことです。"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「2.外海から入ってくるマダイ」</strong>です。湾内で自然に生まれた魚ではありません。">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. 湾の中で生まれたマダイ</button><button onclick="checkAnswer(this)" data-correct="true">2. 外海から入ってくるマダイ</button><button onclick="checkAnswer(this)" data-correct="false">3. 養殖場で育てたマダイ</button>
+                    </div>
+                    <div id="feedback2" class="feedback"></div>
+                </div>
+
+                <div id="trivia" class="tab-content">
+                    <p>鯛は「めでたい魚」として祝い事にもよく使われます。</p>
+                </div>
+                <div id="exhibit" class="tab-content">
+                    <p>錦江湾（鹿児島湾）を中心に鹿児島県本土周辺の海にくらす生きものを展示しています。
+亜熱帯と温帯の境界にあたるこの海域では、亜熱帯のサンゴ礁のようなサンゴ群生地や、温帯特有の藻場など多様な環境が見られます。また、錦江湾は内湾としてはめずらしい２００ｍを超える水深があり、独特な生態系を持っています。</p>
+                    <img src="../001_images/004_exhibit_location/4F_1.png" alt="展示場所" style="max-width:100%; border-radius:8px;" />
+                </div>
+                
+                <!-- フッター -->
+                <div class="footer">
+                    <p>いおワールド　かごしま水族館</p>
+                </div>
+            </div>
+
+        <button id="cancel-button" style="display: none;">キャンセル</button>
+        <div id="video-overlay" style="display: none;">
+            <div id="scan-frame"></div>
+        </div>
+        <video id="video" autoplay playsinline style="display: none;"></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+
+        </body>
+        </html>
+        
