@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+        <html lang="ja">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>ゴマフアザラシ紹介ページ</title>
+            <link rel="stylesheet" href="../000_scripts/reset.css" />
+            <link rel="stylesheet" href="../000_scripts/main_style.css" />
+            <link rel="stylesheet" href="../000_scripts/menu.css" />
+            <link rel="icon" href="../001_images/001_main/favicon.png" type="image/x-icon" />
+            <script src="../000_scripts/main_script.js" defer></script>
+            <script src="../000_scripts/menu.js" defer></script>
+            <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+        </head>
+        <body>
+            <div class="header">
+                <a href="https://ioworld.jp/">
+                    <img src="../001_images/001_menu/main_title.png" alt="main_title" class="header-logo" />
+                </a>
+            </div>
+
+            <button class="hamburger" aria-label="メニュー">
+                <div class="hamburger-inner"><span></span><span></span><span></span></div>
+            </button>
+
+            <nav class="hamburger-menu hidden">
+                <ul>
+                    <li class="menu-item"><a id="qrButton" href="javascript:void(0)">QRコードを撮影して検索</a></li>
+                    <li class="menu-item"><a href="https://haseyukigawa.github.io/ioworld/900-001_search/search.html">お魚検索</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/information#01">営業案内</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/access">アクセス</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/floor1">展示マップ</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/regularevent">イベント</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/facilities/shop#restaurant">ショップ・レストラン</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/study#post-1475">教育・研究</a></li>
+                    <li class="menu-item"><a href="https://ioworld.jp/information/group">団体のお客様</a></li>
+                    <li class="menu-item"><a>Language (Coming soon)</a></li>
+                </ul>
+            </nav>
+
+            
+            <div class="header-container">
+                <h1>ゴマフアザラシ</h1>
+            </div>
+            <div class="content-wrapper">
+                <img src="../001_images/002_main_pictures/gomahuazarashi.jpg" alt="ゴマフアザラシ" class="main-photo">
+
+                <div class="tabs-wrapper">
+                    <button class="scroll-btn scroll-left" aria-label="左にスクロール" id="scrollLeftBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="18 21 3 12 18 3"></polyline>
+                        </svg>
+                    </button>
+                    <div class="tabs" id="tabsContainer">
+                        <button type="button" class="tablink active" data-tab="quick">特徴</button>
+                        <button type="button" class="tablink" data-tab="detail">くわしく</button>
+                        <button type="button" class="tablink" data-tab="comment">飼育員のひとこと</button>
+                        <button type="button" class="tablink" data-tab="area">生息地</button>
+                        <button type="button" class="tablink" data-tab="quiz">お魚クイズ</button>
+                        <button type="button" class="tablink" data-tab="trivia">豆知識「へぇ〜！」</button>
+                        <button type="button" class="tablink" data-tab="exhibit">館内の展示位置</button>
+                    </div>
+                    <button type="button" class="scroll-btn scroll-right" aria-label="右にスクロール" id="scrollRightBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 21 21 12 6 3"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div id="quick" class="tab-content active">
+                    <p>ゴマフアザラシは、名前の通り白っぽい体に黒いゴマのような斑点模様があるアザラシです。体長はおとなで1.5〜1.7メートルほど、体重は100キロ前後に達します。丸くてつぶらな瞳、ずんぐりした体つき、そして「アザラシ」と聞いて多くの人が思い浮かべる、愛嬌ある姿が特徴です。</p>
+                </div>
+                <div id="detail" class="tab-content">
+                    <p>海中では流線型の体を活かしてスイスイと泳ぎ、魚やイカ、甲殻類などを主に食べています。繁殖期になると氷の上で子育てをする姿も見られます。</p>
+                </div>
+                <div id="comment" class="tab-content">
+                    <p>のんびりしているように見えますが、水の中ではとても俊敏！餌の時間になると、目をキラキラさせて待っている姿がかわいらしいんです。個体によって斑点の模様が違うので、よ〜く見ると“顔なじみ”になってくるかもしれませんよ！</p>
+                    <img src="../001_images/003_keeper_pictures/yuka.png" alt="飼育員写真" class="keeper-photo" />
+                    <p class="keeper-name">（飼育員 ゆうか）</p>
+                </div>
+                <div id="area" class="tab-content">
+                    <p>ゴマフアザラシは、北太平洋の寒冷な海域に広く分布しており、日本では北海道周辺のオホーツク海沿岸などで見られます。冬には流氷とともに南下し、時には本州北部までやってくることもあります。
+
+野生では、氷の上や岸辺で休む姿が観察されますが、非常に警戒心が強く、人の気配を感じるとすぐに海へ逃げてしまいます。</p>
+                    <iframe src="" 
+                        width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy">
+                    </iframe>
+                </div>
+
+                <div id="quiz" class="tab-content">
+                    <p class="question"><strong>Q1：</strong>ゴマフアザラシの名前の由来は、次のうちどれでしょう？</p>
+                    <div class="options"
+                        data-correct-msg="✅ <strong>正解！</strong><br>白い体に黒い斑点があり、「ゴマをふったような模様」からその名がつきました。"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「3.体にゴマのような模様があるから」</strong>です。白い体に黒い斑点があり、「ゴマをふったような模様」からその名がつきました。">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. 鳴き声が「ゴマ〜」と聞こえるから</button><button onclick="checkAnswer(this)" data-correct="false">2. 食べ物にゴマが好きだから</button><button onclick="checkAnswer(this)" data-correct="true">3. 体にゴマのような模様があるから</button>
+                    </div>
+                    <div id="feedback1" class="feedback"></div>
+
+                    <p class="question"><strong>Q2：</strong>ゴマフアザラシが野生で主に暮らしている場所はどこでしょう？</p>
+                    <div class="options"
+                        data-correct-msg="✅ <strong>正解！</strong><br>北太平洋の寒い海にすんでいて、冬には流氷の上にのることもあるんです！
+"
+                        data-wrong-msg="❌ <strong>残念。</strong><br>正解は<strong>「3.北の寒い海や氷の上」</strong>です。北太平洋の寒い海にすんでいて、冬には流氷の上にのることもあるんです！
+">
+                        <button onclick="checkAnswer(this)" data-correct="false">1. 砂漠のオアシス</button><button onclick="checkAnswer(this)" data-correct="false">2. 暖かい南の島の海</button><button onclick="checkAnswer(this)" data-correct="true">3. 北の寒い海や氷の上</button>
+                    </div>
+                    <div id="feedback2" class="feedback"></div>
+                </div>
+
+                <div id="trivia" class="tab-content">
+                    <p>ゴマフアザラシの赤ちゃんは、生まれたばかりのころは全身まっ白な「ベイビーファー（産毛）」に包まれています。このふわふわの毛は、生後2〜4週間ほどで抜け落ちて、大人と同じようなゴマ模様に変わります。</p>
+                </div>
+                <div id="exhibit" class="tab-content">
+                    <p>この水槽では、ゴマフアザラシを展示しています。
+水深は４ｍで、水量は１００㎥あります。
+水温は季節ごとにアザラシに適した水温へ変化させていて、冬季は11℃、夏期は22℃に設定しています。</p>
+                    <img src="../001_images/004_exhibit_location/1F_6.png" alt="展示場所" style="max-width:100%; border-radius:8px;" />
+                </div>
+                
+                <!-- フッター -->
+                <div class="footer">
+                    <p>いおワールド　かごしま水族館</p>
+                </div>
+            </div>
+
+        <button id="cancel-button" style="display: none;">キャンセル</button>
+        <div id="video-overlay" style="display: none;">
+            <div id="scan-frame"></div>
+        </div>
+        <video id="video" autoplay playsinline style="display: none;"></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+
+        </body>
+        </html>
+        
